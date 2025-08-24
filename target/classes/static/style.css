@@ -1,0 +1,26 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.left-panel, .right-panel {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.summary-section {
+  padding: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+}
+
+.summary-section ul {
+  padding-left: 20px;
+}
+
+.navbar .nav-link.active {
+  font-weight: bold;
+}

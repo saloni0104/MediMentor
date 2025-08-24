@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medical Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MediMentor</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navItems">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-section="records">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" data-section="tests">Medications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-section="appointments">Appointments</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center">
+        <span class="me-2">👤 Sarah</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Layout -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+      
+      <!-- Left Column -->
+      <div class="col-md-6 left-panel">
+        <!-- Report Tabs -->
+        <ul class="nav nav-tabs mb-3" id="reportTabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-report="1" href="#" onclick="">Lipid Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-report="2" href="#">Typhoid Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-report="3" href="#">Thyroid Report</a>
+          </li>
+        </ul>
+
+        <!-- PDF Viewer -->
+        <div class="pdf-viewer mb-7">
+          <embed id="pdfEmbed" src="images/1681246_2547887.pdf" height="600" type="application/pdf" width="100%" height="400px" />
+        </div>
+
+        <!-- Summary Section -->
+        <div id="reportSummary" class="summary-section">
+          <h5>Summary & Recommendations</h5>
+          <ul id="summaryList" class="mt-2 text-muted">
+            <!-- Summary items populated by JS -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-6 right-panel">
+        <!-- Section content toggled by navbar -->
+        <div id="rightContent" width="100%" height="100%">
+          <!-- Default: Test Results -->
+          <img src="test-results-placeholder.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
